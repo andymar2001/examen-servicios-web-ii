@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/modal.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/sweetalert2.min.css" />
+    <script src="js/sweetalert2.all.min.js"></script>
+
+    <title>Examen II - Servicios web II</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a href="#hero"
+          ><img
+            src="assets/images/logoFarmacia.png"
+            class="logo-brand"
+            alt="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <img src="assets/images/menu.svg" />
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio" id="btnTodoPost">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio" id="btnMisPost"
+                >Mis Servicios</a
+              >
+            </li>
+          </ul>
+          <div>
+            <img
+              src="assets/images/profile.jpg"
+              class="header-avatar"
+              id="avatar"
+              alt="logo"
+            />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="hero">
+      <div class="container">
+        <div class="content-center">
+          <h1 class="mt-5">Servicios "La Nobleza"</h1>
+          <p>
+            Profesionales medicos con experiencia, que ofrecen sus servicios con
+            garantia Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Earum fugiat ipsa quas inventore porro nihil quisquam a, sunt qui,
+            reprehenderit nisi cum quam blanditiis quo itaque! Quam consequatur
+            unde maiores!
+          </p>
+          <a href="#" id="btnInicioSesion" class="btn btn-secondary mt-4"
+            >Inicia Sesión
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="container">
+        <div class="content-center">
+          <h2 id="tituloPost">Trabajamos con profesionales de calidad</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+            officia obcaecati pariatur, quidem iusto, earum cumque ad corporis
+            unde aspernatur reprehenderit fuga sunt modi, voluptas eligendi?
+            Cumque maiores impedit molestias! Lorem ipsum ratione!
+          </p>
+        </div>
+
+        <div>
+          <button
+            type="button"
+            class="miBotonAdd btn btn-success"
+            id="btnModalPost"
+          >
+            Añadir Servicio
+          </button>
+        </div>
+
+        <div class="row" id="posts"></div>
+      </div>
+    </section>
+
+    <footer class="bgDark">
+      <div class="container">
+        <img
+          src="assets/images/logoFarmacia.png"
+          class="logo-brand"
+          alt="logo"
+        />
+        <ul class="list-inline">
+          <li class="list-inline-item footer-menu"><a href="#">Inicio</a></li>
+          <li class="list-inline-item footer-menu">
+            <a href="#">Mis servicios</a>
+          </li>
+        </ul>
+        ©2020 Todos los derechos reservados. Creado por
+        <span>Andy Mariños</span>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="modalSesion">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="cont">
+            <div class="form sign-in">
+              <h2 class="ache2">Bienvenido</h2>
+              <label class="lbl">
+                <span class="spn">Correo electrónico</span>
+                <input type="email" id="emailSesion" class="foco" />
+              </label>
+              <label class="lbl">
+                <span class="spn">Contraseña</span>
+                <input type="password" id="passwordSesion" class="foco" />
+              </label>
+              <a class="btn submit boton btn-mod" id="btnInicioEmail"
+                >Ingresar</a
+              >
+              <p style="text-align: center">Ingresa con:</p>
+              <div class="registro-iconos-redes">
+                <a id="authFB" class="logo-facebook" href="#"></a>
+                <a id="authGoogle" class="logo-google" href="#"></a>
+                <a id="authTwitter" class="logo-twitter" href="#"></a>
+              </div>
+            </div>
+            <div class="sub-cont">
+              <div class="img">
+                <div class="img__text m--up">
+                  <h2 class="ache2">Iniciar sesión</h2>
+                </div>
+                <div class="img__text m--in">
+                  <h2 class="ache2">Registrate</h2>
+                </div>
+                <div class="img__btn">
+                  <span class="m--up spn">Registrarse</span>
+                  <span class="m--in spn">Iniciar sesión</span>
+                </div>
+              </div>
+              <div class="form sign-up">
+                <h2 class="ache2">Registrate</h2>
+                <label class="lbl">
+                  <span class="spn">Nombres</span>
+                  <input type="text" id="nombreContactoReg" class="foco" />
+                </label>
+                <label class="lbl">
+                  <span class="spn">Correo electrónico</span>
+                  <input type="email" class="foco" id="emailContactoReg" />
+                </label>
+                <label class="lbl">
+                  <span class="spn">Contraseña</span>
+                  <input type="password" class="foco" id="passwordReg" />
+                </label>
+                <a class="btn submit boton btn-mod" id="btnRegistroEmail"
+                  >Sign Up</a
+                >
+                <!-- <button type="button" id="btnRegistroEmail" class="submit boton">Sign Up</button> -->
+                <!--  <button type="button" class="fb-btn boton">Join with <span class="spn">facebook</span></button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Post -->
+    <div id="modalPost" class="modal modal-registro">
+      <div class="modal-content-post">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m6 registro-bienvenida">
+              <h4>Publicar un servicio</h4>
+              <div class="registro-bienvenida-texto">
+                Comparte tu servicio profesional
+              </div>
+            </div>
+            <div class="registro-formulario">
+              <div class="input-field">
+                <label for="tituloNewPost">Titulo servicio:</label>
+                <input
+                  id="tituloNewPost"
+                  type="text"
+                  maxlength="30"
+                  data-length="30"
+                  required
+                />
+              </div>
+              <div class="input-field">
+                <label for="descripcionNewPost"
+                  >Descripción del servicio:</label
+                >
+                <textarea
+                  id="descripcionNewPost"
+                  type="text"
+                  maxlength="200"
+                  data-length="200"
+                  class="materialize-textarea"
+                  required
+                ></textarea>
+              </div>
+              <div class="input-field">
+                <label for="linkVideoNewPost">Enlace de video</label>
+                <input id="linkVideoNewPost" type="text" required />
+              </div>
+              <div class="progress-panel">
+                <label for="btnUploadFile">Imagen:</label>
+                <input type="file" value="upload" id="btnUploadFile" />
+                <div class="progress">
+                  <div class="determinate" style="width: 0%"></div>
+                </div>
+              </div>
+              <div class="div-btnInicioSesion">
+                <a id="btnRegistroPost" class="btn-crear-post">Publicar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js"></script>
+    <script type="text/javascript" src="js/config/ConfigFirebase.js"></script>
+    <script type="text/javascript" src="js/util/util.js"></script>
+    <script type="text/javascript" src="js/post/post.js"></script>
+    <script type="text/javascript" src="js/general.js"></script>
+    <script type="text/javascript" src="js/auth/autenticacion.js"></script>
+    <script type="text/javascript" src="js/auth/authController.js"></script>
+    <script type="text/javascript" src="js/post/postController.js"></script>
+    <script>
+      document
+        .querySelector(".img__btn")
+        .addEventListener("click", function () {
+          document.querySelector(".cont").classList.toggle("s--signup");
+        });
+    </script>
+  </body>
+</html>
